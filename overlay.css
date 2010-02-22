@@ -1,0 +1,35 @@
+body.overlaid {
+  -webkit-user-select: none;
+}
+
+body.overlaid .overlay {
+  -webkit-transform: translateY(0);
+}
+
+.overlay {    
+  /* using display none to hide the overlay nullifies -webkit-transition */
+  -webkit-transform: translateY(-50000px);
+	display: -webkit-box;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  -webkit-user-select: auto;
+	-webkit-box-orient: horizontal;
+	-webkit-box-align: stretch;	
+	-webkit-box-pack: center;
+}
+
+.overlay > .wrap {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-box-align: stretch;
+	-webkit-box-pack: center;
+}
+
+.overlay > .wrap > * {        
+	-webkit-box-flex: 0;
+	display: block;
+}      

@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+  
+  <head>
+    <title>CSS3 Overlay System</title>
+    
+    <link rel="stylesheet" href="overlay.css">
+    <script src="overlay.js"></script>
+    
+    <style>
+      /* For this demo. Feel free to customize */
+      .my-dialog {
+        width: 500px;
+        background: #fff;
+        resize: both;
+        overflow: auto;
+        -webkit-border-radius: 10px;
+        padding: 15px;
+        -webkit-box-sizing: border-box;
+        -webkit-box-shadow: 0 3px 6px rgba(0,0,0,1);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e6e6e6));
+        font: 13px "Helvetica";
+      }
+      
+      .my-dialog input {
+        resize: none;
+      }
+      
+      .my-dialog h1 {
+        margin: 0 0 15px;
+        font: bold 24px Helvetica;
+      }
+    </style>
+    
+    <script>
+      function toggleOverlay(){
+        document.body.className = document.body.className.indexOf('overlaid') != -1 ? '' : 'overlaid';
+      }
+      
+      document.addEventListener('DOMContentLoaded', function(){
+        // close when the gray part is clicked
+        document.querySelector('.overlay').addEventListener('click', function(ev){
+          if (/overlay|wrap/.test(ev.target.className)) toggleOverlay();
+        });
+      });
+    </script>
+  </head>
+  
+  <body>
+    
+    <h1>CSS3 Overlay System</h1>
+    
+    <p>By simply toggling the class <code>overlaid</code> from JavaScript, we trigger the visualization of the overlay.</p>
+    
+    <p><button onclick="toggleOverlay();">Click here</button> to trigger it</p>
+    
+    <p>Check the <a href="top.html">animated</a> example</p>
+    
+    <h2>Markup</h2>
+    
+    <code><pre>&lt;div class=&quot;overlay&quot;&gt;
+  &lt;div class=&quot;wrap&quot;&gt;
+  
+    &lt;!-- Your dialog markup --&gt;
+    &lt;div class=&quot;my-dialog&quot;&gt;
+      &lt;h1&gt;Overlay title&lt;/h1&gt;
+      
+      &lt;p&gt;Sample box&lt;/p&gt;
+      
+      &lt;p&gt;List:&lt;/p&gt;
+      &lt;form&gt;
+        &lt;ul id=&quot;list&quot;&gt;
+          &lt;li&gt;Input: &lt;input type=&quot;text&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;Input: &lt;input type=&quot;text&quot;&gt;&lt;/li&gt;
+          &lt;li&gt;Input: &lt;input type=&quot;text&quot;&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/form&gt;
+      
+      (...)
+    &lt;/div&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;</pre></code>
+    
+    <hr />
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    
+    <div class="overlay">
+      <div class="wrap">
+        <div class="my-dialog">
+          <h1>Overlay title</h1>
+          
+          <p>Sample box</p>
+          
+          <p>List:</p>
+          <form>
+            <ul id="list">
+              <li>Input: <input type="text"></li>
+              <li>Input: <input type="text"></li>
+              <li>Input: <input type="text"></li>
+            </ul>
+            
+            <p><a href="#" onclick="document.getElementById('list').innerHTML += '<li>Input: <input></li>';">Add one and watch dialog grow while centered</a>, or resize the dialog (courtesy of CSS3 <code>resize: both</code>)</p>
+          </form>
+          
+          <hr />
+          <button onclick="toggleOverlay();">Close</button>
+        </div>
+      </div>
+    </div>
+    
+  </body>
+  
+</html>
