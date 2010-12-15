@@ -1,35 +1,71 @@
 body.overlaid {
   -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-body.overlaid .overlay {
+body.overlaid div.overlay {
   -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  transform: translateY(0);
 }
 
-.overlay {    
-  /* using display none to hide the overlay nullifies -webkit-transition */
-  -webkit-transform: translateY(-50000px);
-  display: -webkit-box;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.8);
-  -webkit-user-select: auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-align: stretch;	
-  -webkit-box-pack: center;
-}
+  div.overlay {    
+    /* using display none to hide the overlay nullifies -webkit-transition */
+    -webkit-transform: translateY(-50000px);
+    -moz-transform: translateY(-50000px);
+    transform: translateY(-50000px);
 
-.overlay > .wrap {
-	display: -webkit-box;
-	-webkit-box-orient: vertical;
-	-webkit-box-align: stretch;
-	-webkit-box-pack: center;
-}
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
 
-.overlay > .wrap > * {        
-	-webkit-box-flex: 0;
-	display: block;
-}      
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    user-select: auto;
+
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    box-orient: horizontal;
+
+    -webkit-box-align: stretch;
+    -moz-box-align: stretch;
+    box-align: stretch;
+
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+  }
+
+    div.overlay > div.wrap {
+    	display: -webkit-box;
+    	display: -moz-box;
+    	display: box;
+
+    	-webkit-box-orient: vertical;
+    	-moz-box-orient: vertical;
+    	box-orient: vertical;
+
+    	-webkit-box-align: stretch;
+    	-moz-box-align: stretch;
+    	box-align: stretch;
+
+    	-webkit-box-pack: center;
+    	-moz-box-pack: center;
+    	box-pack: center;
+    }
+
+      div.overlay > div.wrap > * {
+      	-webkit-box-flex: 0;
+      	-moz-box-flex: 0;
+      	box-flex: 0;
+
+      	display: block;
+      }
