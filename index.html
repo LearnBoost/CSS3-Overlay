@@ -13,16 +13,21 @@
         background: #fff;
         resize: both;
         overflow: auto;
+
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
         border-radius: 10px;
+
         padding: 15px;
+
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+
         -webkit-box-shadow: 0 3px 6px rgba(0,0,0,1);
         -moz-box-shadow: 0 3px 6px rgba(0,0,0,1);
         box-shadow: 0 3px 6px rgba(0,0,0,1);
+
         background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#e6e6e6));
         font: 13px "Helvetica";
       }
@@ -112,25 +117,27 @@
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
     
     <div class="overlay">
-      <div class="wrap">
-        <div class="my-dialog">
-          <h1>Overlay title</h1>
-          
-          <p>Sample box</p>
-          
-          <p>List:</p>
-          <form>
-            <ul id="list">
-              <li>Input: <input type="text"></li>
-              <li>Input: <input type="text"></li>
-              <li>Input: <input type="text"></li>
-            </ul>
-            
-            <p><a href="#" onclick="document.getElementById('list').innerHTML += '<li>Input: <input></li>';">Add one and watch dialog grow while centered</a>, or resize the dialog (courtesy of CSS3 <code>resize: both</code>)</p>
-          </form>
-          
-          <hr />
-          <button onclick="toggleOverlay();">Close</button>
+      <div class="wrap-outer">
+        <div class="wrap">
+          <div class="my-dialog">
+            <h1>Overlay title</h1>
+
+            <p>Sample box</p>
+
+            <p>List:</p>
+            <form>
+              <ul id="list">
+                <li>Input: <input type="text"></li>
+                <li>Input: <input type="text"></li>
+                <li>Input: <input type="text"></li>
+              </ul>
+
+              <p><a href="#" onclick="document.getElementById('list').innerHTML += '<li>Input: <input></li>';">Add one and watch dialog grow while centered</a>, or resize the dialog (courtesy of CSS3 <code>resize: both</code>)</p>
+            </form>
+
+            <hr />
+            <button onclick="toggleOverlay();">Close</button>
+          </div>
         </div>
       </div>
     </div>
